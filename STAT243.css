@@ -89,3 +89,8 @@ h3{
       }
    
    /* question bar */
+
+   /* R Commands Page */
+   .r-background{
+    background-color: #212121;
+   }
