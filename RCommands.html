@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>R Commands</title>
+</head><body>
+    <h1>R Commands</h1>
+    <div>
+        <table border="2">
+            <tr>
+                <th>R Command</th>
+                <th>Function</th>
+                <th>Format</th>
+            </tr>
+    
+            <tr>
+                <td>tally()</td>
+                <td>Gives numerical results of a study</td>
+                <td>tally(~variable, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>head()</td>
+                <td>Gives the first few rows and columns of the study</td>
+                <td>head(dataset)</td>
+            </tr>
+            <tr>
+                <td>filter()</td>
+                <td>Allows to filter through the data set</td>
+                <td>filter(dataset, criterion)</td>
+            </tr>
+            <tr>
+                <td>gf_bar()</td>
+                <td>Produces a bar graph</td>
+                <td>gf_bar(~variable, data=dataset)</td>
+            </tr>
+    
+            <tr>
+                <td>gf_histogram()</td>
+                <td>Produces a histogram</td>
+                <td>gf_histogram(~variable, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>gf_density()</td>
+                <td>Renders a "fluid" looking graph</td>
+                <td>gf_density(~class, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>mean()</td>
+                <td>Gives the mean of the dataset</td>
+                <td>mean(~variable, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>median()</td>
+                <td>Gives the median of the dataset</td>
+                <td>median(~variable, data=dataset, na.rm = TRUE)</td>
+            </tr>
+            <tr>
+                <td>gf_dotplot()</td>
+                <td>Produces a dotplot</td>
+                <td>gf_dotplot(~variable, data=dataset, p = percentile)</td>
+            </tr>
+    
+            <tr>
+                <td>gf_boxplot()</td>
+                <td>Produces a boxplot</td>
+                <td>gf_boxplot(~variable, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>gf_point()</td>
+                <td>Produces a scatterplot</td>
+                <td>gf_point(~variable, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>cor()</td>
+                <td>Gives the correlation coefficient of the data set</td>
+                <td>cor(y var~x var, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>lm()</td>
+                <td>Produces a linear model (can be piped to another graph using |>)</td>
+                <td>lm(y var~ x var, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>sample()</td>
+                <td>Gives all numbers in random order</td>
+                <td>sample(variable) <I>such as creating a die <-(1:6) and then writing sample(die)</I></td>
+            </tr>
+            <tr>
+                <td>resample()</td>
+                <td>Mimics a dice (can give multiples of different numbers)</td>
+                <td>resample(variable, size=desired size)</td>
+            </tr>
+            <tr>
+                <td>do()</td>
+                <td>Iterates a certain number of times</td>
+                <td>do(desired number)</td>
+            </tr>
+            <tr>
+                <td>prop()</td>
+                <td>Yields relative frequency for specific number</td>
+                <td>prop(~(sample == desired number), data=dataset) or just prop(function == desired times to iterate)</td>
+            </tr>
+            <tr>
+                <td>trunc()</td>
+                <td>Rounds numbers to non-decimal numbers</td>
+                <td>trunc(number or equation)</td>
+            </tr>
+            <tr>
+                <td>gf_segment()</td>
+                <td>Yields a simple graph</td>
+                <td>gf_segment(y var ~ x var + x var)</td>
+            </tr>
+            <tr>
+                <td>dbinom()</td>
+                <td>Singular probability for a pmf</td>
+                <td>dbinom(x, size, probability)</td>
+            </tr>
+            <tr>
+                <td>pbinom()</td>
+                <td>Accumulating probability for a cdf</td>
+                <td>pbinom(x, size, probability)</td>
+            </tr>
+            <tr>
+                <td>dexp()</td>
+                <td>Pdf for x that is exponential</td>
+                <td>dexp(x, rate= &lambda;)</td>
+            </tr>
+            <tr>
+                <td>pexp()</td>
+                <td>Cdf for x that is exponential (antiderivative of dexp())</td>
+                <td>pexp(x, rate= &lambda;)</td>
+            </tr>
+            <tr>
+                <td>qexp()</td>
+                <td>Gives median quartile</td>
+                <td>qexp(x, rate= &lambda;)</td>
+            </tr>
+            <tr>
+                <td>rexp()</td>
+                <td>Gives a random generation from the exponential distribution</td>
+                <td>rexp(x, rate= &lambda;)</td>
+            </tr>
+            <tr>
+                <td>rnorm()</td>
+                <td>Generates n random numbers from a normal distribution</td>
+                <td>rnorm(n, mean=mean, sd= standard deviation)</td>
+            </tr>
+            <tr>
+                <td>pnorm()</td>
+                <td>Returns the cumulative probability of a standard normal distribution</td>
+                <td>pnorm(x, mean, sd)</td>
+            </tr>
+            <tr>
+                <td>qnorm()</td>
+                <td>Returns quantile</td>
+                <td>qnorm(x, mean, sd)</td>
+            </tr>
+            <tr>
+                <td>rbinom()</td>
+                <td>Gives the probability that x is a certain number</td>
+                <td>rbinom(x, mean, pr)</td>
+            </tr>
+            <tr>
+                <td>qbinom()</td>
+                <td>Finds the number p so that pr(x &le; p) is the output</td>
+                <td>qbinom(p, size, pr)</td>
+            </tr>
+            <tr>
+                <td>pbinom()</td>
+                <td>The probability that p &le; k, which indicates what quantile a score of k is at. Can be useful to find the area under wanted curve</td>
+                <td>pbinom(x, size, pr) (or 1-pbinom(x, size, pr) and for a 2 sided test, multiply by 2)</td>
+            </tr>
+            <tr>
+                <td>gf_dist()</td>
+                <td>Creates a distribution</td>
+                <td>gf_dist("dist name", parameters)</td>
+            </tr>
+            <tr>
+                <td>favstats()</td>
+                <td>Gives standard deviation, mean, max, etc.</td>
+                <td>favstats(~variable, data=dataset) </td>
+            </tr>
+            <tr>
+                <td>t.test()</td>
+                <td>Gives a one sample t-test or CI</td>
+                <td>t.test(~variable, data=dataset) <I> such as t.test(~variable, data = dataset, conf. level = 0.92)</I>
+                    </td>
+            </tr>
+            <tr>
+                <td>pchisq()</td>
+                <td>Gives the p-value from a chi-squared statistic</td>
+                <td>pchisq(test stat, df)</td>
+            </tr>
+            <tr>
+                <td>chisq.test()</td>
+                <td>Create a chi-squared table</td>
+                <td>chisq.test(myTable)$ expected</td>
+            </tr>
+            <tr>
+                <td>anova()</td>
+                <td>Gives the F-stat</td>
+                <td>anova(lm(y var~xvar, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>pf()</td>
+                <td>Gives p value for ANOVA</td>
+                <td>1-pf(F stat, k, n)</td>
+            </tr>
+            <tr>
+                <td>TukeyHSD()</td>
+                <td>Tells whether there is a significant different in pairs of means in a data set</td>
+                <td>TukeyHSD(aov(y var~x var, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>fitted()</td>
+                <td>Extracts fitted values from the fitted model object</td>
+                <td>fitted(lm(y var~xvar, data=dataset)</td>
+            </tr>
+            <tr>
+                <td>makeFun()</td>
+                <td>Creates a function</td>
+                <td>funcName <- makeFun(function)</td>
+            </tr>
+            <tr>
+                <td>plot()</td>
+                <td>Plots distribution of positive and negative intervals</td>
+                <td>plot(linear model, which=1)</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
