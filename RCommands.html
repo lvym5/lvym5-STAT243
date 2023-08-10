@@ -5,194 +5,399 @@
 </head>
 
 <link rel="stylesheet" href="STAT243.css">
-<body class="r-background">
-    <h1 class="spacing">R Commands</h1>
-    <div class="r-font">
-        <table border="2" class="r-font">
-            <tr>
-                <th>R Command</th>
-                <th>Function</th>
-                <th>Format</th>
-            </tr>
-    
-            <tr>
-                <td>tally()</td>
-                <td>Gives numerical results of a study</td>
-                <td>tally(~variable, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>head()</td>
-                <td>Gives the first few rows and columns of the study</td>
-                <td>head(dataset)</td>
-            </tr>
-            <tr>
-                <td>filter()</td>
-                <td>Allows to filter through the data set</td>
-                <td>filter(dataset, criterion)</td>
-            </tr>
-            <tr>
-                <td>gf_bar()</td>
-                <td>Produces a bar graph</td>
-                <td>gf_bar(~variable, data=dataset)</td>
-            </tr>
-    
-            <tr>
-                <td>gf_histogram()</td>
-                <td>Produces a histogram</td>
-                <td>gf_histogram(~variable, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>gf_density()</td>
-                <td>Renders a "fluid" looking graph</td>
-                <td>gf_density(~class, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>mean()</td>
-                <td>Gives the mean of the dataset</td>
-                <td>mean(~variable, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>median()</td>
-                <td>Gives the median of the dataset</td>
-                <td>median(~variable, data=dataset, na.rm = TRUE)</td>
-            </tr>
-            <tr>
-                <td>gf_dotplot()</td>
-                <td>Produces a dotplot</td>
-                <td>gf_dotplot(~variable, data=dataset, p = percentile)</td>
-            </tr>
-    
-            <tr>
-                <td>gf_boxplot()</td>
-                <td>Produces a boxplot</td>
-                <td>gf_boxplot(~variable, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>gf_point()</td>
-                <td>Produces a scatterplot</td>
-                <td>gf_point(~variable, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>cor()</td>
-                <td>Gives the correlation coefficient of the data set</td>
-                <td>cor(y var~x var, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>lm()</td>
-                <td>Produces a linear model (can be piped to another graph using |>)</td>
-                <td>lm(y var~ x var, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>sample()</td>
-                <td>Gives all numbers in random order</td>
-                <td>sample(variable) <I>such as creating a die <-(1:6) and then writing sample(die)</I></td>
-            </tr>
-            <tr>
-                <td>resample()</td>
-                <td>Mimics a dice (can give multiples of different numbers)</td>
-                <td>resample(variable, size=desired size)</td>
-            </tr>
-            <tr>
-                <td>do()</td>
-                <td>Iterates a certain number of times</td>
-                <td>do(desired number)</td>
-            </tr>
-            <tr>
-                <td>prop()</td>
-                <td>Yields relative frequency for specific number</td>
-                <td>prop(~(sample == desired number), data=dataset) or just prop(function == desired times to iterate)</td>
-            </tr>
-            <tr>
-                <td>trunc()</td>
-                <td>Rounds numbers to non-decimal numbers</td>
-                <td>trunc(number or equation)</td>
-            </tr>
-            <tr>
-                <td>gf_segment()</td>
-                <td>Yields a simple graph</td>
-                <td>gf_segment(y var ~ x var + x var)</td>
-            </tr>
-            <tr>
-                <td>dbinom()</td>
-                <td>Singular probability for a pmf</td>
-                <td>dbinom(x, size, probability)</td>
-            </tr>
-            <tr>
-                <td>pbinom()</td>
-                <td>Accumulating probability for a cdf</td>
-                <td>pbinom(x, size, probability)</td>
-            </tr>
-            <tr>
-                <td>dexp()</td>
-                <td>Pdf for x that is exponential</td>
-                <td>dexp(x, rate= &lambda;)</td>
-            </tr>
-            <tr>
-                <td>pexp()</td>
-                <td>Cdf for x that is exponential (antiderivative of dexp())</td>
-                <td>pexp(x, rate= &lambda;)</td>
-            </tr>
-            <tr>
-                <td>qexp()</td>
-                <td>Gives median quartile</td>
-                <td>qexp(x, rate= &lambda;)</td>
-            </tr>
-            <tr>
-                <td>rexp()</td>
-                <td>Gives a random generation from the exponential distribution</td>
-                <td>rexp(x, rate= &lambda;)</td>
-            </tr>
-            <tr>
-                <td>rnorm()</td>
-                <td>Generates n random numbers from a normal distribution</td>
-                <td>rnorm(n, mean=mean, sd= standard deviation)</td>
-            </tr>
-            <tr>
-                <td>pnorm()</td>
-                <td>Returns the cumulative probability of a standard normal distribution</td>
-                <td>pnorm(x, mean, sd)</td>
-            </tr>
-            <tr>
-                <td>qnorm()</td>
-                <td>Returns quantile</td>
-                <td>qnorm(x, mean, sd)</td>
-            </tr>
-            <tr>
-                <td>rbinom()</td>
-                <td>Gives the probability that x is a certain number</td>
-                <td>rbinom(x, mean, pr)</td>
-            </tr>
-            <tr>
-                <td>qbinom()</td>
-                <td>Finds the number p so that pr(x &le; p) is the output</td>
-                <td>qbinom(p, size, pr)</td>
-            </tr>
-            <tr>
-                <td>pbinom()</td>
-                <td>The probability that p &le; k, which indicates what quantile a score of k is at. Can be useful to find the area under wanted curve</td>
-                <td>pbinom(x, size, pr) (or 1-pbinom(x, size, pr) and for a 2 sided test, multiply by 2)</td>
-            </tr>
-            <tr>
-                <td>gf_dist()</td>
-                <td>Creates a distribution</td>
-                <td>gf_dist("dist name", parameters)</td>
-            </tr>
-            <tr>
-                <td>favstats()</td>
-                <td>Gives standard deviation, mean, max, etc.</td>
-                <td>favstats(~variable, data=dataset) </td>
-            </tr>
-            <tr>
-                <td>t.test()</td>
-                <td>Gives a one sample t-test or CI</td>
-                <td>t.test(~variable, data=dataset) <I> such as t.test(~variable, data = dataset, conf. level = 0.92)</I>
-                    </td>
-            </tr>
-            <tr>
-                <td>pchisq()</td>
-                <td>Gives the p-value from a chi-squared statistic</td>
-                <td>pchisq(test stat, df)</td>
-            </tr>
+<body class="background">
+    <h1 class="R-title-align">R Commands</h1>
+    <div class="r-font R-button-container">
+        <div class="card">
+            <div class="card-front">
+              <p class="title">tally()</p>
+              <p class="subtitle">Gives numerical results of a study</p>
+            </div>
+            <div class="card-back">
+              <p>tally(~variable, data = dataset)<br>
+            Ex: tally(~x_var, data = quant_Data)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">head()</p>
+              <p class="subtitle">Gives the first few rows of the study</p>
+            </div>
+            <div class="card-back">
+              <p>head(dataset)<br>
+            Ex: head(quant_Data)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">filter()</p>
+              <p class="subtitle">Allows to filter through the dataset</p>
+            </div>
+            <div class="card-back">
+              <p>filter(dataset, criterion)<br>
+            Ex: filter(quant_Data, age > 25) </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">gf_bar()</p>
+              <p class="subtitle">Produces a bar graph</p>
+            </div>
+            <div class="card-back">
+              <p>gf_bar(~variable, data = dataset)<br>
+            Ex: gf_bar(~x_var, data = quant_Data)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">gf_histogram()</p>
+              <p class="subtitle">Produces a histogram</p>
+            </div>
+            <div class="card-back">
+              <p>gf_histogram(~variable, data = dataset)<br>
+            Ex: gf_histogram(~x_var, data = quant_Data)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">gf_density()</p>
+              <p class="subtitle">Renders a "fluid" looking graph</p>
+            </div>
+            <div class="card-back">
+              <p>gf_density(~class, data = dataset)<br>
+            Ex: gf_density(~cars, data = quant_Data</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">mean()</p>
+              <p class="subtitle">Gives the mean of the dataset</p>
+            </div>
+            <div class="card-back">
+              <p>mean(~variable, data = dataset)<br>
+            Ex: mean(~x_var, data = quant_Data)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">median()</p>
+              <p class="subtitle">Gives the median of the dataset</p>
+            </div>
+            <div class="card-back">
+              <p>median(~variable, data = dataset, na.rm = TRUE)<br>
+            Ex:median(~x_var, data = quant_DATA, na.rm = TRUE)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">gf_dotplot()</p>
+              <p class="subtitle">Produces a dotplot</p>
+            </div>
+            <div class="card-back">
+              <p>gf_dotplot(~variable, data = dataset, p = percentile)<br>
+            Ex: gf_dotplot(~x_var, data = quant_Data, p = 0.35)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">gf_boxplot()</p>
+              <p class="subtitle">Produces a boxplot</p>
+            </div>
+            <div class="card-back">
+              <p>gf_boxplot(~variable, data=dataset)<br>
+            Ex:gf_boxplot(~x_var, datat = quant_Data)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">gf_point()</p>
+              <p class="subtitle">Produces a scatterplot</p>
+            </div>
+            <div class="card-back">
+              <p>gf_point(~variable, data = dataset)<br>
+            Ex: gf_point(~x_var, data = quant_Data) </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">cor()</p>
+              <p class="subtitle">Gives the correlation coefficient of the data</p>
+            </div>
+            <div class="card-back">
+              <p>cor(yVar ~ xVar, data = dataset)<br>
+            Ex: cor(y_var ~ x_var, data = quant_Data)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">lm()</p>
+              <p class="subtitle">Produces a linear model to be piped to a graph</p>
+            </div>
+            <div class="card-back">
+              <p>lm(yVar ~ xVar, data = dataset)<br>
+            Ex: lm(y_var ~ x_var, data = quant_Data) (<I>use |> to pipe to a graph</I>)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">sample()</p>
+              <p class="subtitle">Gives all numbers in random order</p>
+            </div>
+            <div class="card-back">
+              <p>sample(variable_)<br>
+            Ex: die <-(1:6)<br>sample(die)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">resample()</p>
+              <p class="subtitle">Mimics a dice</p>
+            </div>
+            <div class="card-back">
+              <p>resample(variable, size = desired size)<br>
+            Ex: resample(x_var, size = 6)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">do()</p>
+              <p class="subtitle">Iterates a certain number of times</p>
+            </div>
+            <div class="card-back">
+              <p>do(desired number)<br>
+            Ex: do(sample(1:6, size = 3, replace = TRUE))</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">prop()</p>
+              <p class="subtitle">Yields relative frequency for specific number</p>
+            </div>
+            <div class="card-back">
+              <p>prop(~(sample == desired number), data = dataset)<br>
+            Ex: prop(~(sample == 5), data = quant_Data)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">trunc()</p>
+              <p class="subtitle">Rounds numbers to non-decimal numbers</p>
+            </div>
+            <div class="card-back">
+              <p>trunc(number or equation)<br>
+            Ex: trunc(15.86)<br>
+        trunc(15*4.7)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">gf_segment()</p>
+              <p class="subtitle">Yields a simple graph</p>
+            </div>
+            <div class="card-back">
+              <p>gf_segment(yVar ~ xVar)<br>
+            Ex: gf_segment(y_var ~ x_var)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">dbinom()</p>
+              <p class="subtitle">Singular probability for a pmf</p>
+            </div>
+            <div class="card-back">
+              <p>dbinom(x, size, probability)<br>
+            Ex: debinom(<I>successes</I>, size = 5, prob = 0.5) </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">pbinom()</p>
+              <p class="subtitle">Accumulating probability for a cdf</p>
+            </div>
+            <div class="card-back">
+              <p>pbinom(x, size, probability)<br>
+            Ex: pbinom(<I>successes</I>, size = 4, prob = 0.2)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">dexp()</p>
+              <p class="subtitle">pdf for x that is exponential</p>
+            </div>
+            <div class="card-back">
+              <p>dexp(x, rate = &lambda;)<br>
+            Ex: dexp(<I>value for pdf</I>, rate = 0.5)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">pexp()</p>
+              <p class="subtitle">cdf for x that is exponential (antiderivative of dexp)</p>
+            </div>
+            <div class="card-back">
+              <p>pexp(x, rate = &lambda;)<br>
+            Ex: pexp(<I>value for cdf</I>, rate = 0.5)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">qexp()</p>
+              <p class="subtitle">Gives median quartile</p>
+            </div>
+            <div class="card-back">
+              <p>qexp(x, rate = &lambda;)<br>
+            Ex: qexp(<I>probability value for computing quartile)</I>, rate = 0.75)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">rexp()</p>
+              <p class="subtitle">Gives a random generation from the exponential distribution</p>
+            </div>
+            <div class="card-back">
+              <p>rexp(x, rate = &lambda;)<br>
+            Ex: rexp(<I>number of random numbers desired</I>, rate = 0.5)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">rnorm()</p>
+              <p class="subtitle">Generatets n random numbesr from a normal distribution</p>
+            </div>
+            <div class="card-back">
+              <p>rnorm(n, mean=mean, sd = standard deviation)<br>
+            Ex: rnorm(<I>number of random numbers desired</I>, mean = 20, sd = 3.2)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">pnorm()</p>
+              <p class="subtitle">Returns the cumulative probabilty of a standard normal distribution</p>
+            </div>
+            <div class="card-back">
+              <p>pnorm(<I>number of random numbers desired</I> mean = 20, sd = 3.2)<br>
+            Ex:</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">qnorm()</p>
+              <p class="subtitle">Returns quantile</p>
+            </div>
+            <div class="card-back">
+              <p>qnorm(x, mean, sd)<br>
+            Ex: qnorm(<I>probability value</I>, mean = 10, sd = 1.1)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">rbinom()</p>
+              <p class="subtitle">Gives the probability that x is a certain number</p>
+            </div>
+            <div class="card-back">
+              <p>rbinom(x, mean, pr)<br>
+            Ex: rbinom(<I>numbers desired to generate</I>, mean = 10, prob = 0.5)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">qbinom()</p>
+              <p class="subtitle">Finds the number p so that pr(x &le; p) is the output</p>
+            </div>
+            <div class="card-back">
+              <p>qbinom(p, size, pr)<br>
+            Ex: qbinom(<I>probability value</I>, size = 10, prob = 0.5)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">pbinom()</p>
+              <p class="subtitle">The probability that p &le; k, which indicates what quantile a score of k is at</p>
+            </div>
+            <div class="card-back">
+              <p>pbinom(x, size, pr) or 1-pbinom(x, size, pr) <I>for a two sided test, multiply by 2</I>><br>
+            Ex: pbinom(<I>successes</I>, size = 5, prob = 0.5) </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">gf_dist()</p>
+              <p class="subtitle">Creates a distribution</p>
+            </div>
+            <div class="card-back">
+              <p>gf_dist("dist name", parameters)<br>
+            Ex: gf_dist("carCount", x > 5)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">favstats()</p>
+              <p class="subtitle">Gives standard deviation, max, mean, etc</p>
+            </div>
+            <div class="card-back">
+              <p>favstats(~variable, data = dataset)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">t.test()</p>
+              <p class="subtitle">Gives a one sample t-test or CI</p>
+            </div>
+            <div class="card-back">
+              <p>t.test(~variable, data = dataset)<br>
+            Ex: t.test(~x_var, data = quant_Data, conf. level = 0.92)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">pchisq()</p>
+              <p class="subtitle">Gives the p-value from a chi-squared statistic</p>
+            </div>
+            <div class="card-back">
+              <p>pchisq(test stat, df)<br>
+            Ex: pchisq(x_var, df = 4)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">chisq.test()</p>
+              <p class="subtitle">Creates a chi-squared table</p>
+            </div>
+            <div class="card-back">
+              <p>chisq.test(myTable)$ expected<br>
+            Ex:</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title"></p>
+              <p class="subtitle"></p>
+            </div>
+            <div class="card-back">
+              <p><br>
+            Ex:</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title"></p>
+              <p class="subtitle"></p>
+            </div>
+            <div class="card-back">
+              <p><br>
+            Ex:</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title"></p>
+              <p class="subtitle"></p>
+            </div>
+            <div class="card-back">
+              <p><br>
+            Ex:</p>
+            </div>
+          </div>
             <tr>
                 <td>chisq.test()</td>
                 <td>Create a chi-squared table</td>
@@ -229,6 +434,7 @@
                 <td>plot(linear model, which=1)</td>
             </tr>
         </table>
+    -->
     </div>
 </body>
 </html>
