@@ -18,6 +18,13 @@ h3{
     color: white;
 }
 
+h4{
+  font-family: serif;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+}
+
 .background{
     background-color: #212121 ;
 }
@@ -206,7 +213,7 @@ h3{
   border-color: #0974f1;
   }
 
-  .r-divider{
+  .divider{
     width: 50%;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -215,4 +222,18 @@ h3{
   }
 
   /*Data Acquisition page */
-  
+  .block{
+    display: inline-block;
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #212121;
+    box-sizing: border-box;
+    margin-left: 40px;
+    margin-right: 40px;
+    vertical-align: top;
+  }
+  .data_text{
+    color: white;
+    font-size: 20px;
+  }
+
