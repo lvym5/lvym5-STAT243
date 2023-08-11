@@ -6,7 +6,12 @@
 
 <link rel="stylesheet" href="STAT243.css">
 <body class="background">
-    <h1 class="R-title-align">R Commands</h1>
+  <a class="back-button" href="#" onclick="goBack()">Back to menu</a>
+  <h1 class="R-title-align">R Commands</h1>
+  <hr class="r-divider">
+    <div>
+      <p1 class="r-text spacing">The following is a list of useful R commands. Hover over each command for its format and a relevant example.</p1>
+    </div>
     <div class="r-font R-button-container">
         <div class="card">
             <div class="card-front">
@@ -345,7 +350,7 @@
             </div>
             <div class="card-back">
               <p>t.test(~variable, data = dataset)<br>
-            Ex: t.test(~x_var, data = quant_Data, conf. level = 0.92)</p>
+            Ex: t.test(~carCount, data = quant_Data, conf. level = 0.92)</p>
             </div>
           </div>
           <div class="card">
@@ -370,71 +375,63 @@
           </div>
           <div class="card">
             <div class="card-front">
-              <p class="title"></p>
-              <p class="subtitle"></p>
+              <p class="title">anova()</p>
+              <p class="subtitle">Provides the F-stat</p>
             </div>
             <div class="card-back">
-              <p><br>
-            Ex:</p>
+              <p>anova(lm(yVar ~ xVar, data=dataset)<br>
+            Ex: anova(lm(~carCount ~ bikeCount, data = quant_Data)</p>
             </div>
           </div>
           <div class="card">
             <div class="card-front">
-              <p class="title"></p>
-              <p class="subtitle"></p>
+              <p class="title">pf()</p>
+              <p class="subtitle">Gives the p-value for ANOVA</p>
             </div>
             <div class="card-back">
-              <p><br>
-            Ex:</p>
+              <p>1-pf(F stat, <I>degrees of freedom of numerator</I>, <I>degrees of freedom of denominator</I>)<br>
+            Ex: 1-pf(30.5, 2, 9)</p>
             </div>
           </div>
           <div class="card">
             <div class="card-front">
-              <p class="title"></p>
-              <p class="subtitle"></p>
+              <p class="title">TukeyHSD()</p>
+              <p class="subtitle">Tells whether there is a significant different in pairs of means in a data set</p>
             </div>
             <div class="card-back">
-              <p><br>
-            Ex:</p>
+              <p>TukeyHSD(aov(yVar ~ xVar, data = dataset)<br>
+            Ex: TukeyHSD(aov(carCount ~ bikeCount, data = quantData)</p>
             </div>
           </div>
-            <tr>
-                <td>chisq.test()</td>
-                <td>Create a chi-squared table</td>
-                <td>chisq.test(myTable)$ expected</td>
-            </tr>
-            <tr>
-                <td>anova()</td>
-                <td>Gives the F-stat</td>
-                <td>anova(lm(y var~xvar, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>pf()</td>
-                <td>Gives p value for ANOVA</td>
-                <td>1-pf(F stat, k, n)</td>
-            </tr>
-            <tr>
-                <td>TukeyHSD()</td>
-                <td>Tells whether there is a significant different in pairs of means in a data set</td>
-                <td>TukeyHSD(aov(y var~x var, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>fitted()</td>
-                <td>Extracts fitted values from the fitted model object</td>
-                <td>fitted(lm(y var~xvar, data=dataset)</td>
-            </tr>
-            <tr>
-                <td>makeFun()</td>
-                <td>Creates a function</td>
-                <td>funcName <- makeFun(function)</td>
-            </tr>
-            <tr>
-                <td>plot()</td>
-                <td>Plots distribution of positive and negative intervals</td>
-                <td>plot(linear model, which=1)</td>
-            </tr>
-        </table>
-    -->
+          <div class="card">
+            <div class="card-front">
+              <p class="title">fitted()</p>
+              <p class="subtitle">Extracts fitted values from the fitted model object</p>
+            </div>
+            <div class="card-back">
+              <p>fitted(lm(yVar ~ xVar, data = dataset)<br>
+            Ex: fitted(lm(carCount ~ bikeCount, data = quant_Data)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">makeFun()</p>
+              <p class="subtitle">Creates a function</p>
+            </div>
+            <div class="card-back">
+              <p>funcName <- makeFun(function)<br>
+            Ex: multiply_nums <- makeFun(x*y)</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <p class="title">plot()</p>
+              <p class="subtitle">Plots distribution of positive and negative intervals</p>
+            </div>
+            <div class="card-back">
+              <p>plot(linear model, which=1)</p>
+            </div>
+          </div>
     </div>
 </body>
 </html>
