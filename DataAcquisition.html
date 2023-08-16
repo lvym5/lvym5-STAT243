@@ -5,14 +5,14 @@
         <title>Basic Data Acquisition</title>
     </head>
     <body class="background">
-        <a class="back-button" href="#" onclick="goBack()">Back to menu</a>
+        <script src="STAT243.js"></script>
         <h1 class="spacing menu-box">Basic Data Acquisition</h1>
-        <hr class="divider">
         <p1 class="spacing r-text">Basic data acquisition: includes types of graphs, variables, spreads, and IQR.</p1>
+        <hr class="divider">
         <div>
             <p1 class="spacing r-text">The variables are split into two categories: categorical and quantitative.</p1>
         </div>
-        <div class="block data_text">
+        <div class="block1 data_text">
             <p> <B>Categorical</B> variables (also called <I>qualitative</I> variables) are variables that take on a certain number 
                 based on its qualitative property.<br>
                 Example: On a 6 sided die, there are 6 options: 1, 2, 3, 4, 5, and 6. There are 6 options available.
@@ -21,14 +21,14 @@
                 </I>
             </p>
         </div>
-        <div class="block data_text">
+        <div class="block1 data_text">
             <p>The first of the <B>quantitative</B> variables is called a discrete variable. In statistics, a discrete variable
                 is categorized as an enumerable list of values or possibilities of all numbers in a list. <br>
                 Example: Suppose we are counting bears in a forest. The variable <I>bears</I> is a discrete variable because
                 there could be one or zero bears in the forest, but there also could be one million. We are just unsure. 
             </p>
         </div>
-        <div class="block data_text">
+        <div class="block1 data_text">
             <p>The second of the <B>quantitative</B> variables is called a continuous variable. A continuous variable
             is defined as not being a finite number. This means that it is <I>usually</I> not a round or whole number.<br>
             Example: Suppose you are running a race; your time may be recorded to the 
@@ -36,6 +36,116 @@
     to be determined the thousandth, ten thousandth, hundred thousandth, etc second of your race time.  </p>
         </div>
         <hr class="divider">
-
+        <div class="spacing r-text">Types of distributions: graphs and charts<br>
+        A distribution of a variable gives the value along with its frequency</div>
+        <div class="data_text left-text">
+            <p>We use bar charts for categorical data and histograms for quantitative data. <br>
+            If a graph is not symmetric, then it is considered skewed. <br>
+            <li><B>Right skew</B>: tail points to right (mean is larger than the median)</li>
+            <li><B>Left skew</B>: tail points to left (median is larger than the mean)</li><br>
+            Make sure to take note of the shape of a graph when observing it:
+            <li>Number of nodes</li>
+            <li>Type of symmetry</li>
+            <li>Pattern</li>
+            <li>Deviation of pattern (also called outliers)</li><br>
+            Other things to know: 
+            <li>Interpolation does not work for categorical data</li>
+            <li>Sensitivity vs. Restraint: Data is said to be sensitive if it responds drastically to outliers</li>
+            </p>
+        </div>
+        <hr class="divider">
+        <div>
+            <p1 class="spacing r-text">
+                Important spreads to be aware of
+            </p1>
+        </div>
+        <div class="block1 data_text">
+            <p><B>Range</B> tells us how far apart the edges of our data are. This is found by subtracting the minimum from the maximum.</p>
+        </div>
+        <div class="block1 data_text">
+            <p><B>Interquartile Range</B>, also known as Q<sub>3</sub>-Q<sub>1</sub>, takes the first and third quartiles of the 5 number spread. It is said to be very resistant to outliers.</p>
+        </div>
+        <div class="block1 data_text">
+            <p><B>Standard Deviation</B> is sensitive to outliers, but it is a way to measure how much a set of numbers vary from their average value. The equation is found below: <br>
+            &sigma; = &#8730;(&#8721;(x - x&#772;)&sup2; / (n - 1))</p>
+        </div>
+        <hr class="divider">
+        <div>
+            <p1 class="spacing r-text">
+                The 5 number spread and the bell shaped curve
+            </p1>
+            <div class="data_text left-text">
+                <p>Our 5 number spread consists of: 
+                <li>The maximum</li>
+                <li>The third quartile (Q<sub>3</sub>)</li>
+                <li>The median</li>
+                <li>The first quartile (Q<sub>1</sub>)</li>
+                <li>The minimum</li><br>
+                The 1.5 IQR rule states that points are considered outliers if the whiskers exceed 1.5x the distance of the first and third quartiles. 
+                If our data is symmetric and a bell shaped appearance, 95% of our data will lie 2 standard deviations on either end of the mean.
+                <li>If a graph is flat, it is called uniform</li> <br>
+                The Z-score is generally used when our data is symmetric and bell shaped. It measures the distance between a data point and the mean using standard deviations. <br>
+                Z-score formula: <sup>(original value - mean)</sup>/<sub>standard deviation</sub></p>
+            </div>
+        </div>
+        <hr  class="divider">
+        <div>
+            <p1 class="spacing r-text">
+                Types of multivariate and bivariate studies
+            </p1>
+            <div class="block2 data_text">
+                <p>Observation studies are studies that follow groups to compare and contrast characteristics. This does not include the observer changing anything about the study.<br>
+                Example: A researcher watches monkeys in the wild to see how they interact with each other in the environment.</p>
+            </div>
+            <div class="block2 data_text">
+               <p>Experimental studies are studies in which researchers manipulate explanatory variables (called factors). Features of experiments include: <br>
+                <li>Control group</li>
+                <li>Blinding</li>
+                <li>Double blinding</li>
+                <li>Randomization of assigned treatments</li><br>
+                Example: A researcher wants to know if a pill actually lowers blood pressure. They divide a group of randomly chosen people into two groups, one group using the actual pill and the other taking a placebo. The results are then studied. <br> </p>
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="spacing r-text">
+            Displays of association
+        </div>
+        <div class="data_text r-text spacing">
+            When there are two variables, there are different displays to show the association.<br>
+        </div>
+        <div class="block1 data_text">
+            Both variables are categorical: use a 2 way table.
+        </div>
+        <div class="block1 data_text">
+            Both variables are quantitative: use a scatterplot.
+        </div>
+        <div class="block1 data_text">
+            One variable is categorical and the other is quantitative: use a boxplot.
+        </div>
+        <div class="data_text left-text">
+            <p>To find the correlation coefficient, use the following formula: <br>
+            r = &#931;((x - x̄)(y - ȳ)) / √(&#931;(x - x̄)² &#8901; &#931;(y - ȳ)²)<br>
+            Correlation properties: <br>
+            <li>Requires two quantitative variables</li>
+            <li>Value is always between -1 and 1</li>
+            <li>If r = 1, then the xy relationship is a perfect line, with a positive slope</li>
+            <li>If r = -1, then the xy relationship is a perfect negative slope</li>
+            <li>r has the same sign as the line through the points</li>
+            <li>r remains the same independent of which variable is considered explanatory</li>
+            <li>r is independent of units</li>
+            <li>r<sup>2</sup> is the coefficient of determination, which measures what portion of variability in response is explained by a linear relationship (always positive) </li></p>
+        </div>
+        <hr class="divider">
+        <div class="spacing r-text">
+            Residuals and Interpolation
+        </div>
+        <div class="block2 data_text">
+            <p1>A residual is the difference between the actual and observed y value and the predicted one. <br>
+            Residual formula: &epsilon; = y<sub>i</sub> - y&#770;<sub>i</sub></p1>
+        </div>
+        <div class="block2 data_text">
+            <p1>Interpolate: estimating between the range of data (more reliable than extrapolation)<br>
+            Extrapolate: estimating outside the range of data </p1>
+        </div>
     </body>
 </html>

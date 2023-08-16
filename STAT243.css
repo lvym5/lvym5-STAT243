@@ -222,9 +222,20 @@ h4{
   }
 
   /*Data Acquisition page */
-  .block{
+  .block1{
     display: inline-block;
     width: 25%;
+    padding: 10px;
+    border: 1px solid #212121;
+    box-sizing: border-box;
+    margin-left: 40px;
+    margin-right: 40px;
+    vertical-align: top;
+  }
+
+  .block2{
+    display: inline-block;
+    width: 40%;
     padding: 10px;
     border: 1px solid #212121;
     box-sizing: border-box;
@@ -235,5 +246,27 @@ h4{
   .data_text{
     color: white;
     font-size: 20px;
+  }
+
+  .left-text{
+    flex: 1;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 50%;
+  }
+
+  .right-text{
+    text-align: right;
+    margin-right: 40px;
+  }
+
+  .left-container{
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .image img{
+    max-width: 100%;
   }
 
