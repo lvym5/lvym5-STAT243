@@ -3,10 +3,99 @@
     <head>
         <link rel="stylesheet" href="STAT243.css">
         <title>Hypothesis Tests and Confidence Intervals</title>
+        <script type="text/javascript" async src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [['$', '$'],['\\(','\\)']],
+                    processEscapes: true
+                }
+            });
+        </script>
     </head>
     <body class="background">
+        <a class="back-button" href="STAT243.html">Back to menu</a>
         <h1 class="spacing menu-box">Hypothesis Tests and Confidence Intervals</h1>
         <p1 class="spacing r-text">Hypothesis Tests and Confidence Intervals: calculating p values to make assumptions about a population
         </p1>
+        <hr class="divider">
+        <div class="r-text spacing">
+            Confidence Intervals
+        </div>
+        <div class="block1 data_text">
+            <p><b>Inference</b>: Using sample info to draw conclusions about the population. We achieve this by using CI construction and hypothesis testing</p>
+        </div>
+        <div class="block1 data_text">
+            <p><b>Confidence intervals</b> have the format: <I>point estimate &ne; z score * SE</I></p>
+        </div>
+        <div class="block1 data_text">
+            <p>A <b>z score</b> allows us to describe the standard deviations of sample means <br>
+            <li>
+               To find the z score, we use qnorm(1-(1-level of confidence/2)) in R
+            </li>  
+        </p>
+        </div>
+        <div class="block2 data_text">
+            <p>Hypothesis testing contains two types of hypotheses: <br>
+            <li>H<sub>0</sub>, our null hypothesis, that typically assumes that there is no relationship between the samples</li>
+            <li>H<sub>a</sub>, our alternative hypothesis answers our supposed research question</li>
+        </p>
+        </div>
+        <div class="block2 data_text">
+        <p>
+            <b>Null distribution</b>: sampling distribution of your sample statistic under the assumption that H<sub>0</sub> is true. <br>
+            <I>What is the relative frequency of getting a result like my sample or something more extreme given the null hypothesis?</I>
+        </p>
+        <p>It is typical to use a significance level &alpha; of 0.05, as we want a p value lesser or equal to &alpha;. <br>
+        A p value smaller than 0.05 tells us that the probability of obtaining the test results at least as extreme as those observed during our test is less than 5%  </p>
+        </div>
+        <hr class="divider">
+        <div class="spacing r-text">
+            Inference Tests
+        </div>
+        <div class="left-text data_text">
+            <p>One Proportion Inference Tests
+                <li>Our test statistic p is provided for our null and alternative hypotheses</li>
+                <li>We use an iid sample becasue the independence of draws are valid as long as the population does not exceed 10% of the actual population </li>
+            </p>
+            <p>
+                The distribution for x and p̂ are not the same: <br>
+                <li>Distribution for x: \(x \sim N(np, \sqrt{np(1-p)})\)</li>
+                <li>Distribution for p̂:  \(\hat{p} \sim N(p, \sqrt{\frac{p(1-p)}{n}})\)</li>
+            </p>
+        </div>
+        <hr class="divider">
+        <div class="spacing r-text">
+            <p>Type Errors and Limitations</p>
+        </div>
+        <div class="block2 data_text">
+            <p>Type 1 Error: The null hypothesis is true but we reject it <br>
+            <I>Example: We jail an innocent man</I></p>
+         </div>
+         <div class="block2 data_text">
+            <p>Type 2 Error: The null hypothesis is false but we fail to reject it. <br>
+            <I>Example: We let a guilty man go free</I></p>
+         </div>
+         <hr class="divider">
+         <div class="spacing r-text">
+            <p>Two Proportion Inference Procedures</p>
+         </div>
+         <div class="block2 data_text">
+            <p>
+                In two proportion inference procedures, we want samples from two populations which are independent and justify the normal approximation. <br>
+                <li>\(n_1 p_1 \geq 10\), \(n_1 (1 - p_1) \geq 10\)</li>
+                <li>\(n_2 p_2 \geq 10\), \(n_2 (1 - p_2) \geq 10\)</li>
+            </p>
+         </div>
+         <div class="block2 data_text">
+            <p>
+                Our standard error is \(SE = \sqrt{\frac{p_1 \cdot (1 - p_1)}{n_1} + \frac{p_2 \cdot (1 - p_2)}{n_2}}\), where: <br>
+                <li>\(p_1\) is the sample proportion of the first group</li>
+                <li>\(p_2\) is the sample proportion of the second group</li>
+                <li>\(n_1\) is the sample size of the first group</li>
+                <li>\(n_2\) is the sample size of the second group</li>
+            </p>
+         </div>
     </body>
 </html>

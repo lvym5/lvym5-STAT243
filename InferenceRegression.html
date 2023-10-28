@@ -5,9 +5,68 @@
         <title>Inference For Regression</title>
     </head>
     <body class="background">
+        <a class="back-button" href="STAT243.html">Back to menu</a>
         <h1 class="spacing menu-box">Inference For Regression</h1>
         <p1 class="spacing r-text">Inference For Regression: Making predictions about variables based on 
             their relationships with existing data
         </p1>
+        <hr class="divider">
+        <div class="r-text spacing">
+            <p>Residuals and Inferences</p>
+        </div>
+        <div class="data_text block2">
+            <p>A residual is the observed value - predicted value <br>
+            <li>e<sub><I>i</I></sub> = y<sub><I>i</I></sub> - &#x0177;<sub><I>i</I></sub> or y<sub><I>i</I></sub> - (<I>b<sub>0</sub> + b<sub>1</sub>x<sub>i</sub></I>)</li>
+            <li>b<sub><I>1</I></sub> = r * s<sub>y</sub>/s<sub>x</sub> and b<sub><I>0</I></sub> = y&#772; - b<sub>1</sub>x&#772;</li>
+        </p>
+        </div>
+        <div class="data_text block2">
+            <p>
+                Inference on a slope: <br>
+                Drawing a conlcusion based on sample data toassume something about the whole population
+                <li>To do inference, we need the assumption y~&Beta;<sub>0</sub> + &Beta;<sub>x</sub>x + &epsilon;, where &epsilon;~<I>norm(0,&sigma;)</I></li>
+            </p>
+        </div>
+        <hr class="divider">
+        <div class="block2 data_text">
+            <p>Confidence Intervals for regression: <br>
+                Point estimate &plusmn; critical value * Standard Error
+            </p>
+            <p>Model Utility Tests: <br>
+                Hypotheses: 
+                <li>H<sub>0</sub>: &Beta;<sub>1</sub> = 0</li>
+                <li>H<sub>a</sub>: &Beta;<sub>1</sub> &ne; 0</li>
+            </p>
+        </div>
+        <hr class="divider">
+        <div class="spacing r-text">
+            <p>Utility Tests</p>
+        </div>
+        <div class="block2 data_text">
+            <p>Find the t-score: <I>t</I> = [r&Sqrt;(n-2)]/&Sqrt;(1-r<sup>2</sup>)
+            <li>We can also find the t-score using summary(lm()) in R, as it is reported on the slope line</li>
+            <li>Use df = n-2</li>
+            </p>
+            <p>Rejecting the null hypothesis means our model has usefulness</p>
+        </div>
+        <div class="block2 data_text">
+            <p>
+                R<sup>2</sup> = SSG/(SSG + SSResid), which is our coefficient of determination <br>
+                The coefficient of determination tells the proportion of variation of the dependent variable if we wanted to predict it from the independent variable
+            </p>
+        </div>
+        <hr class="divider">
+        <div class="spacing r-text">
+            <p>Confidence Intervals</p>
+        </div>
+        <div class="left-text data_text">
+            <p>Prediction intervals and confidence intervals are different<br>
+            It is harder to predict one thing than the average of multiple, so confidence intervals are usually more accurate </p>
+            <p>Formula to estimate r: Standard error of estimate = √(Σ(y - ŷ)² / (n - 2)) <br>
+                <li>y is the actual value</li>
+                <li>ŷ is the predicted value</li>
+                <li>n is the number of data points</li>
+            </p>
+        </div>
     </body>
 </html>

@@ -3,9 +3,20 @@
     <head>
         <link rel="stylesheet" href="STAT243.css">
         <title>Basic Data Acquisition</title>
+        <script type="text/javascript" async src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [['$', '$'],['\\(','\\)']],
+                    processEscapes: true
+                }
+            });
+        </script>
     </head>
     <body class="background">
         <script src="STAT243.js"></script>
+        <a class="back-button" href="STAT243.html">Back to menu</a>
         <h1 class="spacing menu-box">Basic Data Acquisition</h1>
         <p1 class="spacing r-text">Basic data acquisition: includes types of graphs, variables, spreads, and IQR.</p1>
         <hr class="divider">
@@ -67,7 +78,11 @@
         </div>
         <div class="block1 data_text">
             <p><B>Standard Deviation</B> is sensitive to outliers, but it is a way to measure how much a set of numbers vary from their average value. The equation is found below: <br>
-            &sigma; = &#8730;(&#8721;(x - x&#772;)&sup2; / (n - 1))</p>
+            \( \sigma = \sqrt{\frac{\sum{(x - \bar{x})^2}}{n - 1}} \), where: <br>
+            <li>\( \sigma \) is the standard deviation</li>
+            <li>\( x \) is each individual data point</li>
+            <li>\( \bar{x} \) is the mean of the data</li>
+            <li>\( n \) is the number of data points</li></p>
         </div>
         <hr class="divider">
         <div>
@@ -85,7 +100,7 @@
                 If our data is symmetric and a bell shaped appearance, 95% of our data will lie 2 standard deviations on either end of the mean.
                 <li>If a graph is flat, it is called uniform</li> <br>
                 The Z-score is generally used when our data is symmetric and bell shaped. It measures the distance between a data point and the mean using standard deviations. <br>
-                Z-score formula: <sup>(original value - mean)</sup>/<sub>standard deviation</sub></p>
+                Z-score formula = $\frac{x - \mu}{\sigma}$</p>
             </div>
         </div>
         <hr  class="divider">
@@ -124,8 +139,9 @@
         </div>
         <div class="data_text left-text">
             <p>To find the correlation coefficient, use the following formula: <br>
-            r = &#931;((x - x̄)(y - ȳ)) / √(&#931;(x - x̄)² &#8901; &#931;(y - ȳ)²)<br>
-            Correlation properties: <br>
+                \( r = \frac{\sum ((x_i - \bar{x})(y_i - \bar{y}))}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}} \)<br>
+            </p>
+            <p>Correlation properties: <br>
             <li>Requires two quantitative variables</li>
             <li>Value is always between -1 and 1</li>
             <li>If r = 1, then the xy relationship is a perfect line, with a positive slope</li>
@@ -141,7 +157,7 @@
         </div>
         <div class="block2 data_text">
             <p1>A residual is the difference between the actual and observed y value and the predicted one. <br>
-            Residual formula: &epsilon; = y<sub>i</sub> - y&#770;<sub>i</sub></p1>
+            Residual formula: \( \varepsilon = y_i - \hat{y}_i \)</p1>
         </div>
         <div class="block2 data_text">
             <p1>Interpolate: estimating between the range of data (more reliable than extrapolation)<br>

@@ -1,13 +1,188 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="STAT243.css">
-        <title>Probability</title>
-    </head>
-    <body class="background">
-        <h1 class="spacing menu-box">Probability</h1>
-        <p1 class="spacing r-text">Probability: Long term relative frequency that an event 
-            occurs over repetition of the random process.
-        </p1>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="STAT243.css">
+    <title>Probability</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                processEscapes: true,
+            },
+            CommonHTML: { scale: 85 },
+        });
+    </script>
+    
+
+<body class="background">
+    <a class="back-button" href="STAT243.html">Back to menu</a>
+    <h1 class="spacing menu-box">Probability</h1>
+    <p1 class="spacing r-text">Probability: Long term relative frequency that an event
+        occurs over repetition of the random process.
+    </p1>
+    <hr class="divider">
+    <div class="data_text left-text">
+        <p>Events can be combined (algebra of events): <br>
+            <li>Supposed A,B are events, S is the sample space. A&isin;B means all outcomes in A are found in B </li>
+            <li>A&cap;B is A and B for those outcomes common to both </li>
+            <li>A&cup;B means A or B</li>
+            <li>When A&cap;B is 0, we say that A and B are mutually exclusive, because the probability of both of the
+                events happening is 0.</li>
+            <li>A<sup>c</sup> is known as the complement of A, or 1-A</li>
+        </p>
+    </div>
+    <hr class="divider">
+    <div class="spacing r-text">
+        Probability Rules
+    </div>
+    <div class="block1 data_text">
+        <p>
+            <li>Probabilities must be between 0 and 1</li>
+        </p>
+    </div>
+    <div class="block1 data_text">
+        <p>
+            <li>Probability of anything happening in a sample space is 1 </li>
+        </p>
+    </div>
+    <div class="block1 data_text">
+        <p>
+            <li>For disjoint events, A&cup;B = P(A) + P(B)</li>
+        </p>
+    </div>
+    <div class="block1 data_text">
+        <p>
+            <li>P(A) = number of outcomes in A/total number of outcomes</li>
+        </p>
+    </div>
+    <div class="block1 data_text">
+        <p>
+            <li>P(A&cup;B) = P(A) + P(B) - P(A&cap;B)</li>
+        </p>
+    </div>
+    <div class="block1 data_text">
+        <p>
+            <li>Conditional Probability P(B|A) = P(A&cap;B)/P(A)</li>
+        </p>
+    </div>
+    <div class="data_text block1">
+        <p>
+            <li>Bayes Rule: <br>
+                P(A|B) = (P(B|A) * P(A)) / P(B)</li>
+        </p>
+    </div>
+    <div class="block1 data_text">
+        <p>
+            <li>X is a random variable if it is a numerical outcome of some random process</li>
+        </p>
+    </div>
+    <div class="block1 data_text">
+        <p>
+            <li>The population we draw from affects the sample distribution, so increase the sample size for better
+                accuracy. </li>
+        </p>
+    </div>
+    <hr class="divider">
+    <div class="spacing r-text">
+        Random Variable calculations
+    </div>
+    <div class="block2 data_text">
+        <p>
+            Mean &mu;<sub>x</sub>, the expected value of x: &sum;<sub>x</sub><I>x*Pr(X=x)</I>
+        </p>
+    </div>
+    <div class="block2 data_text">
+        <p>
+            Variance &sigma;<sup>2</sup><sub>x</sub> is computed as
+            &sum;<sub>x</sub>(<I>x-&mu;<sub>x</sub></I>)<sup>2</sup>*<I>Pr(X=x)</I>
+        </p>
+    </div>
+    <div class="block2 data_text">
+        <p>
+            X probability for density f(x): Pr(a &le; x &le; b)) = &int;<sub>a</sub><sup>b</sup> <I>f(x)dx</I>
+            <li>Requirements of a pdf (Probability Density Function): never negative, total area under the curve is 1
+            </li>
+            <li>If we set f(x) = &int;<sub>-&infin;</sub><sup>x</sup><I>f(t)dt</I>, we accumulate a cdf (Cumulative
+                Distribution Function</li>
+        </p>
+    </div>
+    <hr class="divider">
+    <div class="spacing r-text">
+        Useful Parameters
+    </div>
+    <div>
+        <p>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Symbol</th>
+            </tr>
+            <tr>
+                <td>Mean</td>
+                <td>&mu;</td>
+            </tr>
+            <tr>
+                <td>Proportion</td>
+                <td>p or &pi;</td>
+            </tr>
+            <tr>
+                <td>True Correlation</td>
+                <td>&rho;</td>
+            </tr>
+            <tr>
+                <td>True Slope</td>
+                <td>&Beta;</td>
+            </tr>
+            <tr>
+                <td>Sample Mean</td>
+                <td>x&#772;</td>
+            </tr>
+            <tr>
+                <td>Sample Proportion</td>
+                <td>p&#770;</td>
+            </tr>
+            <tr>
+                <td>Correlation Coefficient</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>Slope</td>
+                <td>b</td>
+            </tr>
+        </table>
+        </p>
+    </div>
+    <hr class="divider">
+    <div class="spacing r-text">
+        Binomial Variables
+    </div>
+    <div class="block2 data_text">
+        <li>The population we draw from affects the sample distribution, so increase the sample size for better
+            accuracy.</li> <br>
+        Instances of random binomial variables examples:
+        <li>Take 10 free throws with a 70% accuracy shooter. Let X be the count of free throws made. </li>
+        <li>Draw with replacement, n = 5 times from a bag containing proportion 3/7 blue tokens where X is the count of
+            blue tokens </li>
+    </div>
+    <div class="block2 data_text">
+        Common features to identify a binomial setting: <br>
+        <li>Random process breaks into success/repetitive Bernoulli trials</li>
+        <li>These trials are carried out a predetermined number of times</li>
+        <li>2 results (success or failure)</li>
+        <li>Trials are independent</li>
+        <li>Pr(success) is known number P, failure is 1-P</li>
+    </div>
+    <div class="left-text data_text">
+        <p>
+            <b>When X ~ Binom(n, p):</b><br>
+            <ul>
+                <li>E(x) = &mu;<sub>x</sub> = np</li>
+                <li>Var(x) = np(1 - p)</li>
+                <li>SD(x) = &radic;(np(1 - p))</li>
+            </ul>
+        </p>
+    </div>
+</body>
+
 </html>

@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    processEscapes: true
+                }
+            });
+        </script>
         <link rel="stylesheet" href="STAT243.css">
         <title>Chi Tests</title>
     </head>
     <body class="background">
+        <a class="back-button" href="STAT243.html">Back to menu</a>
         <h1 class="spacing menu-box">Univariate Nonbinary Categorical Tests</h1>
-        <p1 class="spacing r-text">Univariate nonbinary categorical tests: Known as Chi-Squared tests
-        </p1>
+        <p class="spacing r-text">Univariate nonbinary categorical tests: Known as Chi-Squared tests</p>
+        <hr class="divider">
+        <div class="r-text spacing">
+            <p>Chi squared tests test for whether values are equally likely (or fit, according to their predicted percentages)</p>
+        </div>
+        <div class="block1 data_text">
+            <p>Hypotheses:
+                <ul>
+                    <li>H<sub>0</sub>: p<sub>a</sub> = some proportion, p<sub>b</sub> = some proportion. etc</li>
+                    <li>H<sub>a</sub> &ne; some proportion (or at least one of the proportions is off)</li>
+                </ul>
+            </p>
+        </div>
+        <div class="block1 data_text">
+            <p>We can use a Chi-squared test statistic with formula:</p>
+            <p>$$\chi^2 = \sum \frac{{(O - E)^2}}{E}$$</p>
+        </div>
+        <div class="block1 data_text">
+            <p>
+                Given our test statistic, we can use technology or R to find the p-value
+                <ul>
+                    <li>Pchisq(test stat, df)</li>
+                    <li>Degrees of freedom is (number of rows - 1) * (number of columns - 1)</li>
+                </ul>
+            </p>
+        </div>
+        <hr class="divider">
+        <div class="spacing r-text">
+            <p>Testing with a two-way table</p>
+        </div>
+        <div class="block2 data_text">
+            <p>Create a table of expected counts and compare using the formula for a chi-squared test statistic</p>
+        </div>
     </body>
 </html>

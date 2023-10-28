@@ -5,8 +5,46 @@
         <title>The Central Limit Theorem</title>
     </head>
     <body class="background">
+        <a class="back-button" href="STAT243.html">Back to menu</a>
         <h1 class="spacing menu-box">The Central Limit Theorem</h1>
         <p1 class="spacing r-text">Central Limit Theorem: The fundamental theorem of statistics
         </p1>
+        <hr class="divider">
+        <div class="spacing r-text">
+            What is the Central Limit Theorem?
+        </div>
+        <div class="left-text data_text">
+            <p>
+                The Central Limit Theorem tells us that our random independent variables, sampling distribution, and sample mean leans towards the standard normal distribution (bell shaped curve), even if the original variables are not distributed normally.
+            </p>
+        </div>
+        <hr class="divider">
+        <div class="spacing r-text">
+            Mathematical Rules of the Central Limit Theorem
+        </div>
+        <div class="block2 data_text">
+            <p>
+                If Y = aX -> &mu;<sub>y</sub> = a&mu;<sub>x</sub>, and variance is a<sup>2</sup>&sigma;x<sup>2</sup>
+            </p>
+        </div>
+        <div class="block2 data_text">
+            <p>
+                If Y = x+b, then &mu;<sub>y</sub> = &mu;x + b and variance is &sigma;<sup>2</sup><sub>y</sub> = &sigma;<sup>2</sup><sub>x</sub>
+            </p>
+        </div>
+        <div class="left-text data_text">
+            <li>An iid sample is an independent and identical distribution (to simulate this, use resample() in R) </li> <br>
+            <li>An srs is a simple random sample, equally likely, but no replacement (use sample() in R)</li>
+        </div>
+        <div class="block2 data_text">
+            <p>
+                E(aX + bY) = aE(x) + bE(y)
+            </p>
+        </div>
+        <div class="block2 data_text">
+            <p>
+                Var(X+Y) = Var(x) + Var(y) if x and y are independent
+            </p>
+        </div>
     </body>
 </html>
